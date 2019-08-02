@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="widgets.try_box:">
+	<tab>
+		<fieldset>
+			<field name="title" 	type="string" maxLength="100" dbtype="varchar"/>
+			<field name="subtitle"	type="string" maxLength="200" dbtype="varchar" />
+			<field name="link" 		type="string" dbtype="varchar" control="linkPicker" />
+			<field name="image" 	type="string" control="assetPicker" allowedTypes="image" multiple="false" />
+		</fieldset>
+	</tab>
+</form>

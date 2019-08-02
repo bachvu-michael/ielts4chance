@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="widgets.special_4_column:">
+	<tab>
+		<fieldset>
+			<field name="items" control="objectPicker" object="widget_special_4_item" multiple="true" sortable="true" quickadd="true" quickedit="true" />
+		</fieldset>
+	</tab>
+</form>

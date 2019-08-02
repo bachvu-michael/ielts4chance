@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="widgets.banner_detail:">
+	<tab>
+		<fieldset>
+			<field name="title" 	type="string" maxLength="100" dbtype="varchar" />
+			<field name="subtitle" 	type="string" maxLength="100" dbtype="varchar" />
+			<field name="image" control="assetPicker" allowedTypes="image" multiple="false" />
+		</fieldset>
+	</tab>
+</form>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="widgets.team_4_column:">
+	<tab>
+		<fieldset>
+			<field name="title_1" 	type="string" maxLength="100" dbtype="varchar"/>
+			<field name="title_2" 	type="string" maxLength="100" dbtype="varchar"/>
+			<field name="subtitle" 	type="string" maxLength="200" dbtype="varchar"/>
+			<field name="items" 	control="objectPicker" object="widget_team_4_item" multiple="true" sortable="true" quickadd="true" quickedit="true" />
+
+		</fieldset>
+	</tab>
+</form>

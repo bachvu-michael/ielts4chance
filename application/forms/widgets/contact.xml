@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="widgets.contact:">
+	<tab>
+		<fieldset>
+			<field name="lat"  			type="string" maxLength="20" dbtype="varchar" />
+			<field name="long"  		type="string" maxLength="20" dbtype="varchar"  />
+			<field name="zoom" 			type= "numeric" dbtype = "decimal(10,2)" minValue="1" default ="15" />
+			<field name="content"  		type="string" maxLength="4000" dbtype="varchar" control="richEditor"  />
+		</fieldset>
+	</tab>
+</form>
