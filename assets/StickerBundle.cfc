@@ -11,6 +11,7 @@ component {
 		bundle.addAsset( id="js-modernizr"          , path="/js/lib/modernizr-2.6.2.min.js"                         );
 		bundle.addAsset( id="js-respond"            , path="/js/lib/respond.js"                                     );
 
+		
 		bundle.addAsset( id="css-core-google-font"  , url="//fonts.googleapis.com/css?family=Roboto:700%2C300%2C300italic%7CNoto+Serif:400%2C700",  type="css"  );
 		bundle.addAsset( id="css-core-bootstrap"    , path="/css/lib/bootstrap.min.css"                             );
 		bundle.addAsset( id="css-core-icomoon"      , path="/css/lib/icomoon.css"                                   );
@@ -18,9 +19,11 @@ component {
 		bundle.addAsset( id="css-magnific-popup"    , path="/css/lib/magnific-popup.css"                            );
 		bundle.addAsset( id="css-bxslider"          , path="/css/lib/jquery.bxslider.css"                           );
 		bundle.addAsset( id="css-ie8"               , path="/css/lib/ie8.css"                                       );
+		bundle.addAsset( id="css-fontawesome5"      , path="/fontawesome/css/all.min.css"                           );
 		//template
 		bundle.addAsset( id="js-googlemap"           , path="/kiddos/js/google-map.js"                                       );
 		
+
 		bundle.addAssets(
 			  directory   = "/js/"
 			, match       = function( path ){ return ReFindNoCase( "_[0-9a-f]{8}\..*?\.min.js$", arguments.path ); }

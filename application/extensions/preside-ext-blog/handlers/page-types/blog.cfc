@@ -5,7 +5,7 @@ component {
     property name="siteTreeService" inject="siteTreeService";
 
     private function index( event, rc, prc, args={} ) {
-         
+         event.include(assetId="css-fontawesome5");
         _getBlogPosts( event=event, rc=rc, prc=prc );
 
         return renderView(

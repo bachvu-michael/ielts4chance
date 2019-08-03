@@ -5,20 +5,20 @@
 
 <cfif !isEmpty( args.authors ) || !isEmpty( args.archives ) || !isEmpty( args.tags )>
     <cfoutput>
-        <div class="filter-tags">
+        <div class="filter-tags tagcloud">
             <!--- TODO: i18n --->
             <span class="filter-tags-label">Showing result for</span>
             <cfloop query="args.authors">
                 <cfset link = event.buildLink( page=args.blogId, querystring="filterAction=remove&filterType=authors&filterValue=" & id ) />
-                <span class="filter-tags-item">#name# <a href="#link#"><i class="font-icon font-icon-close"></i></a></span>
+                <a href="#link#" class="filter-tags-item tag-cloud-link">#name#<i class="far fa-times-circle pl-2"></i></a>
             </cfloop>
             <cfloop query="args.archives">
                 <cfset link = event.buildLink( page=args.blogId, querystring="filterAction=remove&filterType=archives&filterValue=" & key ) />
-                <span class="filter-tags-item">#label# <a href="#link#"><i class="font-icon font-icon-close"></i></a></span>
+                <a  class="filter-tags-item tag-cloud-link" href="#link#">#label#<i class="far fa-times-circle pl-2"></i></a>
             </cfloop>
             <cfloop query="args.tags">
                 <cfset link = event.buildLink( page=args.blogId, querystring="filterAction=remove&filterType=tags&filterValue=" & id ) />
-                <span class="filter-tags-item">#label# <a href="#link#"><i class="font-icon font-icon-close"></i></a></span>
+                <a  class="filter-tags-item tag-cloud-link" href="#link#">#label#<i class="far fa-times-circle pl-2"></i></a>
             </cfloop>
         </div>
     </cfoutput>
