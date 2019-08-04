@@ -24,7 +24,7 @@
 <!--[if IE 9]>         <html class="no-js lt-ie10 gt-ie8"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js gt-ie8" lang="en"> <!--<![endif]-->
     <head>
-        <title>Kiddos - Free Bootstrap 4 Template by Colorlib</title>
+        <title>Ielts4chance - English for you</title>
         <meta charset="utf-8">
         <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
