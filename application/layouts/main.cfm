@@ -33,19 +33,19 @@
         <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     
         <link rel="stylesheet" href="/assets/kiddos/css/open-iconic-bootstrap.min.css">
-        <link rel="stylesheet" href="/assets/kiddos/css/animate.css">
+        <link rel="stylesheet" href="/assets/kiddos/css/animate.min.css">
         
         <link rel="stylesheet" href="/assets/kiddos/css/owl.carousel.min.css">
         <link rel="stylesheet" href="/assets/kiddos/css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="/assets/kiddos/css/magnific-popup.css">
+        <link rel="stylesheet" href="/assets/kiddos/css/magnific-popup.min.css">
     
         <link rel="stylesheet" href="/assets/kiddos/css/aos.css">
     
         <link rel="stylesheet" href="/assets/kiddos/css/ionicons.min.css">
         
-        <link rel="stylesheet" href="/assets/kiddos/css/flaticon.css">
-        <link rel="stylesheet" href="/assets/kiddos/css/icomoon.css">
-        <link rel="stylesheet" href="/assets/kiddos/css/style.css">
+        <link rel="stylesheet" href="/assets/kiddos/css/flaticon.min.css">
+        <link rel="stylesheet" href="/assets/kiddos/css/icomoon.min.css">
+        <link rel="stylesheet" href="/assets/kiddos/css/style.min.css">
 
         <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
 
@@ -72,7 +72,7 @@
         <script src="/assets/kiddos/js/jquery-migrate-3.0.1.min.js"></script>
         <script src="/assets/kiddos/js/popper.min.js"></script>
         <script src="/assets/kiddos/js/bootstrap.min.js"></script>
-        <script src="/assets/kiddos/js/jquery.easing.1.3.js"></script>
+        <script src="/assets/kiddos/js/jquery.easing.1.3.min.js"></script>
         <script src="/assets/kiddos/js/jquery.waypoints.min.js"></script>
         <script src="/assets/kiddos/js/jquery.stellar.min.js"></script>
         <script src="/assets/kiddos/js/owl.carousel.min.js"></script>
@@ -80,7 +80,7 @@
         <script src="/assets/kiddos/js/aos.js"></script>
         <script src="/assets/kiddos/js/jquery.animateNumber.min.js"></script>
         <script src="/assets/kiddos/js/scrollax.min.js"></script>
-        <script src="/assets/kiddos/js/main.js"></script>
+        <script src="/assets/kiddos/js/main.min.js"></script>
         #event.renderIncludes("js")#
       
     </body>
