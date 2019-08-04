@@ -60,7 +60,7 @@
                 <h2 class="ftco-heading-2">#linksSectionTitle#</h2>
                 <ul class="list-unstyled">
                   <cfloop list="#links#" index="link">
-                      <li>
+                      <li class="py-2">
                           #renderLink(id="#link#",before="<span class='ion-ios-arrow-round-forward mr-2'></span>")#
                       </li>
                   </cfloop>
@@ -87,7 +87,7 @@
             <div class="col-md-12 text-center">
   
               <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    Copyright &copy;2019 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="noreferrer">Colorlib</a>
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
           </div>

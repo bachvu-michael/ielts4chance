@@ -22,15 +22,14 @@
 <!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
 <!--[if IE 9]>         <html class="no-js lt-ie10 gt-ie8"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js gt-ie8"> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js gt-ie8" lang="en"> <!--<![endif]-->
     <head>
         <title>Kiddos - Free Bootstrap 4 Template by Colorlib</title>
         <meta charset="utf-8">
         <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        <meta name="Description" content="website for people learn English">
+    
     
         <link rel="stylesheet" href="/assets/kiddos/css/open-iconic-bootstrap.min.css">
         <link rel="stylesheet" href="/assets/kiddos/css/animate.min.css">
@@ -66,21 +65,22 @@
         #footer#
         #adminBar#
         <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="##eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="##F96D00"/></svg></div>
-
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 
         <script src="/assets/kiddos/js/jquery.min.js"></script>
-        <script src="/assets/kiddos/js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="/assets/kiddos/js/popper.min.js"></script>
-        <script src="/assets/kiddos/js/bootstrap.min.js"></script>
-        <script src="/assets/kiddos/js/jquery.easing.1.3.min.js"></script>
-        <script src="/assets/kiddos/js/jquery.waypoints.min.js"></script>
-        <script src="/assets/kiddos/js/jquery.stellar.min.js"></script>
-        <script src="/assets/kiddos/js/owl.carousel.min.js"></script>
-        <script src="/assets/kiddos/js/jquery.magnific-popup.min.js"></script>
-        <script src="/assets/kiddos/js/aos.js"></script>
-        <script src="/assets/kiddos/js/jquery.animateNumber.min.js"></script>
-        <script src="/assets/kiddos/js/scrollax.min.js"></script>
-        <script src="/assets/kiddos/js/main.min.js"></script>
+        <script src="/assets/kiddos/js/jquery-migrate-3.0.1.min.js" async defer></script>
+        <script src="/assets/kiddos/js/popper.min.js" async defer></script>
+        <script src="/assets/kiddos/js/bootstrap.min.js" async defer ></script>
+        <script src="/assets/kiddos/js/jquery.easing.1.3.min.js" async defer></script>
+        <script src="/assets/kiddos/js/jquery.waypoints.min.js" async defer></script>
+        <script src="/assets/kiddos/js/jquery.stellar.min.js" async defer></script>
+        <script src="/assets/kiddos/js/owl.carousel.min.js" defer></script>
+        <script src="/assets/kiddos/js/jquery.magnific-popup.min.js" async defer></script>
+        <script src="/assets/kiddos/js/aos.js" async defer></script>
+        <script src="/assets/kiddos/js/jquery.animateNumber.min.js" async defer></script>
+        <script src="/assets/kiddos/js/scrollax.min.js" async defer></script>
+        <script src="/assets/kiddos/js/main.min.js" async defer></script>
         #event.renderIncludes("js")#
       
     </body>
