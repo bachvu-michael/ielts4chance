@@ -1,7 +1,11 @@
 <cfscript>
 	menuItems = args.menuItems ?: [];
+	home = args.home ?: "home";
 </cfscript>
 <cfoutput>
+	<li class="nav-item">
+		<a href="/" class="nav-link">#args.home.title#</a>
+	</li>
 	<cfloop array="#menuItems#" index="menuItem">
 		<cfset menuItemClass = "site-head-nav-dropdown" />
 		<cfif menuItem.active>

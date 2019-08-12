@@ -1,0 +1,18 @@
+.banner-custom {
+  background-color: #e5e5e5;
+}
+.banner-custom .banner-wraper {
+  padding: 20px 0 100px 0;
+}
+.banner-custom .banner-wraper .banner-video {
+  position: absolute;
+}
+.banner-custom .owl-carousel.home-slider {
+  height: 400px;
+}
+.banner-custom .owl-carousel.home-slider .slider-item {
+  height: 400px;
+}
+.banner-custom .owl-carousel.home-slider .slider-item .slider-text h1 {
+  font-size: 35px;
+}

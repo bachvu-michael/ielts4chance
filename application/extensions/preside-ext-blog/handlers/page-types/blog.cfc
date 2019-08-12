@@ -27,7 +27,19 @@ component {
             , args          = args
         );
     }
+    
+    private function blog_content( event, rc, prc, args={} ) {
 
+        event.include(assetId="css-fontawesome5");
+        _getBlogPosts( event=event, rc=rc, prc=prc );
+
+        return renderView(
+              view          = 'page-types/blog/blog_content'
+            , presideObject = 'blog'
+            , id            = event.getCurrentPageId()
+            , args          = args
+        );
+    }
     public any function rss( event, rc, prc, args={} ) {
 
         var blogId = rc.blogId ?: event.getCurrentPageId();

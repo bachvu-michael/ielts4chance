@@ -1,5 +1,6 @@
 component {
 	property name="siteTreeSvc" inject="siteTreeService";
+	property name="presideObjectService" inject="presideObjectService";
 
 <!--- VIEWLETS --->
 
@@ -14,7 +15,11 @@ component {
 			, includeInactive = event.showNonLiveContent()
 			, activeTree      = activeTree
 		);
-
+		args.home = presideObjectService.selectData(
+			objectName   = "page"
+		  , selectFields = ["title"]
+		  , filter = {id = siteTreeSvc.getSiteHomepage().id }
+		);
 		return renderView( view="core/navigation/mainNavigation", args=args );
 	}
 

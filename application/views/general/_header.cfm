@@ -39,7 +39,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a href="/" class="nav-link pl-0">Trang chủ</a></li>
+					<li class="nav-item"><a href="/" class="nav-link pl-0"></a></li>
 					#mainNav#
 					<!--
 					<li class="nav-item"><a href="teacher.html" class="nav-link">Teacher</a></li>
