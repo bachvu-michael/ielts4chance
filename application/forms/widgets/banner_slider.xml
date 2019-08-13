@@ -3,6 +3,7 @@
 	<tab>
 		<fieldset>
 			<field name="items" control="objectPicker" object="widget_banner_slider_item" multiple="true" sortable="true" quickadd="true" quickedit="true" />
+			<field name="video_link" />
 		</fieldset>
 	</tab>
 </form>
