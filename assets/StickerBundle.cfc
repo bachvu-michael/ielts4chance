@@ -10,7 +10,9 @@ component {
 		bundle.addAsset( id="jq-parallax"           , path="/js/lib/parallax.min.js"                                );
 		bundle.addAsset( id="js-modernizr"          , path="/js/lib/modernizr-2.6.2.min.js"                         );
 		bundle.addAsset( id="js-respond"            , path="/js/lib/respond.js"                                     );
-
+		bundle.addAsset( id="js-notify"             , path="/js/bootstrap-notify/bootstrap-notify.min.js"                                     );
+		bundle.addAsset( id="js-request-quote"      , path="/js/specific/request-quote/main.js"                                     );
+		
 		
 		bundle.addAsset( id="css-core-google-font"  , url="//fonts.googleapis.com/css?family=Roboto:700%2C300%2C300italic%7CNoto+Serif:400%2C700",  type="css"  );
 		bundle.addAsset( id="css-core-bootstrap"    , path="/css/lib/bootstrap.min.css"                             );

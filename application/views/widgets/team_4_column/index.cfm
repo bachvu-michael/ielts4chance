@@ -15,7 +15,7 @@
 					<p>#args.subtitle#</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row justify-content-center">
 				<cfif !isEmpty(args.items)>
 					#renderView(
 						view          = "/widgets/team_4_column/_item"
