@@ -2,7 +2,7 @@
 <form i18nBaseUri="widgets.request_quote:">
 	<tab>
 		<fieldset>
-			<field name="image" />
+			<field name="image" type="string" control="assetPicker" allowedTypes="image" multiple="false"/>
 			<field name="title" />
 			<field name="sub_title" />
 		</fieldset>
