@@ -15,6 +15,7 @@
 			<field binding="site.links" />
 
 			<field binding="site.info_section_title" />
+			<field binding="site.messager_config" />
 		</fieldset>
 	</tab>
 </form>

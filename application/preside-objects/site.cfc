@@ -11,4 +11,6 @@ component {
     property name="email"       type="string"   dbtype="varchar"  maxLength="100" default="";
 
     property name="logo"                        relationship="many-to-one" relatedto="asset" allowedTypes="images";
+    property name="messager_config"     type="string"   dbtype="varchar"  maxLength="1000" default="";
+    
 }

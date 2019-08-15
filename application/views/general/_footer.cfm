@@ -11,6 +11,7 @@
     phone                   = site.phone              ?: "";
     email                   = site.email              ?: "";
     infoSectionTitle        = site.info_section_title              ?: "";
+    messager_config         = site.messager_config ?: "";
 </cfscript>
 <cfoutput>
     <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -93,4 +94,5 @@
           </div>
         </div>
       </footer>
+      #messager_config#
 </cfoutput>
