@@ -5,10 +5,11 @@
 <cfparam name="prc.policyMessage" default="" />
 <cfparam name="rc.token"          default="" />
 <cfparam name="rc.message"        default="" />
-
+<cfscript>
+</cfscript>
 <cfoutput>
+<div class="container">
     <h1>#args.title#</h1>
-
     <cfswitch expression="#rc.message#">
         <cfcase value="EMPTY_PASSWORD">
             <div class="alert alert-danger" role="alert">
@@ -65,4 +66,6 @@
             <button type="submit" class="btn btn-danger">#translateResource( uri="page-types.reset_password:submitButton.title" )#</button>
         </div>
     </form>
+</div>
+
 </cfoutput>

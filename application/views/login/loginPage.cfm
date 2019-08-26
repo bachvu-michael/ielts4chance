@@ -34,6 +34,11 @@
             <cfcase value="PASSWORD_RESET">
                 <div class="alert alert-success">#translateResource( 'cms:login.password.reset.confirmation' )#</div>
             </cfcase>
+            <cfcase value="REGISTER_SUCCESS">
+                <div class="alert alert-success">
+                    REGISTER_SUCCESS
+                </div>
+            </cfcase>
         </cfswitch>
     
         <form action="#event.buildLink( linkTo="login.attemptLogin" )#" method="post">
@@ -41,7 +46,7 @@
     
             <div class="form-group">
                 <label for="loginId">#translateResource( uri="page-types.login:emailaddress.label" )#</label>
-                <input type="email" id="loginId" name="loginId" value="#args.loginId#" class="form-control">
+                <input type="text" id="loginId" name="loginId" value="#args.loginId#" class="form-control">
             </div>
     
             <div class="form-group">

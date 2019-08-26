@@ -12,6 +12,7 @@ component {
 		bundle.addAsset( id="js-respond"            , path="/js/lib/respond.js"                                     );
 		bundle.addAsset( id="js-notify"             , path="/js/bootstrap-notify/bootstrap-notify.min.js"                                     );
 		bundle.addAsset( id="js-request-quote"      , path="/js/specific/request-quote/main.js"                                     );
+		bundle.addAsset( id="js-profile"      		, path="/js/specific/profile/main.js"                                     );
 		
 		
 		bundle.addAsset( id="css-core-google-font"  , url="//fonts.googleapis.com/css?family=Roboto:700%2C300%2C300italic%7CNoto+Serif:400%2C700",  type="css"  );

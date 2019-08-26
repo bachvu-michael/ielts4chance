@@ -11,7 +11,10 @@
  *
  * You should remove this comment once you are done with it.
  */
-
+/**
+ * @dataManagerGroup sitewide
+ * @labelField title
+ */
 component  {
 	property name="title" 			type="string" dbtype="varchar" maxLength=200;
 	property name="subtitle" 		type="string" dbtype="varchar" maxLength=200;

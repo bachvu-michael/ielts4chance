@@ -1,5 +1,6 @@
 /**
  * @dataManagerGroup sitewide
+ * @labelField type
  */
 component {
 	property name="type" control="select" labels="Facebook,Twitter,Google plus" values="facebook,twitter,google-plus";

@@ -16,3 +16,9 @@
 .banner-custom .owl-carousel.home-slider .slider-item .slider-text h1 {
   font-size: 35px;
 }
+.topper .text {
+  color: #fff;
+}
+.topper a:hover .text {
+  border-bottom: 2px solid #fff;
+}

@@ -11,7 +11,10 @@
  *
  * You should remove this comment once you are done with it.
  */
-
+/**
+ * @dataManagerGroup sitewide
+ * @labelField title
+ */
 component  {
 	property name="icon" control="select" default="flaticon-kids" values="flaticon-kids,flaticon-jigsaw,flaticon-education,flaticon-security,flaticon-reading,flaticon-teacher,flaticon-books,flaticon-diploma";
 	property name="background" default="##000000" control="SimpleColourPicker" colours="f1453d|5d50c6|8cc152|1eaaf1|ffffff|f7f7f7|cce5ff|e2e3e5|d4edda|f8d7da|fff3cd|d1ecf1|d6d8d9|8db9df|EAF2FF|ffd8d0|c7ecc7|ffa6ff|ffdcae|8cff8c|ffa0b4|ffe38f|d3d3d3|b2ffb2|9999cc|ff9999|ffcccc|7fbf7f";

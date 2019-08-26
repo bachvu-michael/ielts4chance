@@ -15,6 +15,8 @@
     //      .include( assetId="css-ie8"                          )
     //      .include( assetId="js-modernizr"                     )
     //      .include( assetId="js-respond"         , group="top" );
+    event.include( assetId="js-notify");
+    
 </cfscript>
 
 <cfoutput><!DOCTYPE html>
@@ -80,6 +82,7 @@
         <script src="/assets/kiddos/js/jquery.magnific-popup.min.js" ></script>
         <script src="/assets/kiddos/js/aos.js"></script>
         <script src="/assets/kiddos/js/jquery.animateNumber.min.js" ></script>
+        <script src="/assets/kiddos/js/scrollax.min.js"></script>
         <script src="/assets/kiddos/js/scrollax.min.js"></script>
         <script src="/assets/kiddos/js/main.min.js"></script>
         #event.renderIncludes("js")#

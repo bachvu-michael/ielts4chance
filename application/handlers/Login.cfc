@@ -1,7 +1,9 @@
 component {
 
-	property name="websiteLoginService"   inject="websiteLoginService";
-	property name="passwordPolicyService" inject="passwordPolicyService";
+	property name="websiteLoginService"   	inject="websiteLoginService";
+	property name="passwordPolicyService" 	inject="passwordPolicyService";
+	property name="userDao" 				inject="presidecms:object:website_user";
+	property name="sessionStorage" 			inject="sessionStorage";
 
 // core events
 	public void function attemptLogin( event, rc, prc ) output=false {
@@ -99,6 +101,116 @@ component {
 		} );
 
 	}
+	public struct function checkLogin( event, rc, prc ) {
+
+		if ( websiteLoginService.isLoggedIn() ) {
+			var currenUser = userDao.selectData(id = sessionStorage.getStorage().website_user.id);
+			result = currenUser.getrow(1);
+			return result;
+		}
+		return {};
+	}
+
+	public void function registerPost( event, rc, prc ) output=false {
+		announceInterception( "preAttemptLogin" );
+		if ( websiteLoginService.isLoggedIn() && !websiteLoginService.isAutoLoggedIn() ) {
+			setNextEvent( url=_getDefaultPostLoginUrl( argumentCollection=arguments ) );
+		}
+		var loginId      	= rc.loginId  	?: "";
+		var email     		= rc.email 		?: "";
+		var fullName     	= rc.fullName 	?: "";
+		var address     	= rc.address 	?: "";
+		if(!isEmpty(loginId) && !isEmpty(email) && !isEmpty(fullName)){
+			var existEmail = userDao.selectData(
+				filter       = "website_user.email_address LIKE :email AND website_user.login_id LIKE :loginId"
+				, filterParams  = { "email" = {type="varchar", value="%#email#%"},"loginId" = {type="varchar",  value="%#loginId#%"} }
+			);			
+			if(!isEmpty(existEmail)){
+				var persist = event.getCollectionWithoutSystemVars();
+				persist.message = "EMAIL_ID_DUPLICATE";
+	
+				setNextEvent( url=event.buildLink( page="register" ), persistStruct=persist );
+			}
+			var newId = userDao.insertData(
+				data = {
+					login_id: loginId,
+					email_address:email,
+					display_name:fullName,
+					address:address
+				}
+			);
+			if(!isEmpty(newId)){
+				var persist = event.getCollectionWithoutSystemVars();
+				persist.message = "REGISTER_SUCCESS";
+				websiteLoginService.sendWelcomeEmail(newId);
+				setNextEvent( url=event.buildLink( page="login" ), persistStruct=persist );
+			}else{
+				var persist = event.getCollectionWithoutSystemVars();
+				persist.message = "EMAIL_VALIDATE";
+	
+				setNextEvent( url=event.buildLink( page="register" ), persistStruct=persist );
+			}
+		}else{
+			var persist = event.getCollectionWithoutSystemVars();
+		    persist.message = "NULL_FIELD";
+
+			setNextEvent( url=event.buildLink( page="register" ), persistStruct=persist );
+		}
+		
+
+		var persist = event.getCollectionWithoutSystemVars();
+		    persist.message = "REGISTER_FAILD";
+
+		setNextEvent( url=event.buildLink( page="register" ), persistStruct=persist );
+	}
+	public boolean function profileInfoPost( event, rc, prc ) {
+		announceInterception( "preAttemptLogin" );
+		if ( !(websiteLoginService.isLoggedIn() && ( !websiteLoginService.isAutoLoggedIn() || _isDirectLoginPageRequest( event ) ) )) {
+			setNextEvent( url=_getDefaultPostLoginUrl( argumentCollection=arguments ) );
+		}
+		var loginId      	= rc.loginId  	?: "";
+		var email     		= rc.email 		?: "";
+		var fullName     	= rc.fullName 	?: "";
+		var address     	= rc.address 	?: "";
+		var userId = websiteLoginService.getLoggedInUserId();
+
+		var result = userDao.updateData( id=userId, data={
+				login_id        = loginId
+				, email_address = email
+				, display_name 	= fullName
+				,address 		= address
+		} );
+		if(result){
+			return true;
+		}
+		return false;
+	}
+	public boolean function profilePasswordPost( event, rc, prc ) {
+		announceInterception( "preAttemptLogin" );
+		if ( !(websiteLoginService.isLoggedIn() && ( !websiteLoginService.isAutoLoggedIn() || _isDirectLoginPageRequest( event ) ) )) {
+			setNextEvent( url=_getDefaultPostLoginUrl( argumentCollection=arguments ) );
+		}
+		var password      	= rc.password  	?: "";
+		var rePassword     	= rc.rePassword 		?: "";
+		var userId = websiteLoginService.getLoggedInUserId();
+		if(password != rePassword || password=="" || rePassword ==""){
+			return false;
+		}
+		websiteLoginService.changePassword(password);
+		return true;
+
+		// var result = userDao.updateData( id=userId, data={
+		// 		, email_address = email
+		// 		, display_name 	= fullName
+		// 		,address 		= address
+		// } );
+		// if(result){
+		// 	return true;
+		// }
+		// return false;
+	}
+	
+	
 
 // page type viewlets
 	private string function loginPage( event, rc, prc, args={} ) output=false {
@@ -145,6 +257,34 @@ component {
 		return renderView( view="/login/resetPassword", presideObject="reset_password", id=event.getCurrentPageId(), args=args );
 	}
 
+	private string function registerPage( event, rc, prc, args={} ) output=false {
+		if ( websiteLoginService.isLoggedIn() && ( !websiteLoginService.isAutoLoggedIn() || _isDirectLoginPageRequest( event ) ) ) {
+			setNextEvent( url=_getDefaultPostLoginUrl( argumentCollection=arguments ) );
+		}
+		
+		args.loginId         	= args.loginId      	?: ( rc.loginId      	?: "" );
+		args.email         		= args.email      		?: ( rc.email      		?: "" );
+		args.fullName         	= args.fullName      	?: ( rc.fullName      	?: "" );
+		args.address         	= args.address      	?: ( rc.address      	?: "" );
+		args.message         	= args.message      	?: ( rc.message      	?: "" );
+
+		return renderView( view="/login/registerPage", presideObject="register", id=event.getCurrentPageId(), args=args );
+	}
+	private string function profilePage( event, rc, prc, args={} ) output=false {
+		if ( !(websiteLoginService.isLoggedIn() && ( !websiteLoginService.isAutoLoggedIn() || _isDirectLoginPageRequest( event ) ) )) {
+			setNextEvent( url=_getDefaultPostLoginUrl( argumentCollection=arguments ) );
+		}
+
+		var userId = websiteLoginService.getLoggedInUserId();
+		var currenUser = userDao.selectData(id =userId);
+		args.loginId         	= currenUser.login_id      			?:  "";
+		args.email         		= currenUser.email_address      	?:  "";
+		args.fullName         	= currenUser.display_name      		?:  "";
+		args.address         	= currenUser.address      			?:  "";
+
+		return renderView( view="/login/profilePage", presideObject="profile", id=event.getCurrentPageId(), args=args );
+	}
+	
 // private helpers
 	private string function _getDefaultPostLoginUrl( event, rc, prc ) output=false {
 		var defaultPage = getSystemSetting( "website_users", "default_post_login_page", "" );

@@ -7,6 +7,8 @@
 <cfparam name="rc.message" default="" />
 
 <cfoutput>
+    <div class="container">
+
     <h1>#args.title#</h1>
 
     <cfswitch expression="#rc.message#">
@@ -50,4 +52,6 @@
             <button type="submit" class="btn btn-danger">#translateResource( uri="page-types.forgotten_password:submitButton.title" )#</button>
         </div>
     </form>
+</div>
+
 </cfoutput>
