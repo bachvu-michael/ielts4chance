@@ -7,6 +7,9 @@
     linksSectionTitle     = site.links_section_title     ?: "Contact us"; // TODO: i18n
     links                   = site.links           ?: "";
 
+    linksSectionTitle2     = site.links_section_title_2     ?: "Contact us"; // TODO: i18n
+    links2                   = site.links_2           ?: "";
+
     address                 = site.address                 ?: "";
     phone                   = site.phone              ?: "";
     email                   = site.email              ?: "";
@@ -30,37 +33,22 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-3">
-              <div class="ftco-footer-widget mb-5">
-                <h2 class="ftco-heading-2">Recent Blog</h2>
-                <div class="block-21 mb-4 d-flex">
-                  <a class="blog-img mr-4" style="background-image: url(/assets/kiddos/images/image_1.jpg);"></a>
-                  <div class="text">
-                    <h3 class="heading"><a href="##">Even the all-powerful Pointing has no control about</a></h3>
-                    <div class="meta">
-                      <div><a href="##"><span class="icon-calendar"></span> Dec 25, 2018</a></div>
-                      <div><a href="##"><span class="icon-person"></span> Admin</a></div>
-                      <div><a href="##"><span class="icon-chat"></span> 19</a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="block-21 mb-5 d-flex">
-                  <a class="blog-img mr-4" style="background-image: url(/assets/kiddos/images/image_2.jpg);"></a>
-                  <div class="text">
-                    <h3 class="heading"><a href="##">Even the all-powerful Pointing has no control about</a></h3>
-                    <div class="meta">
-                      <div><a href="##"><span class="icon-calendar"></span> Dec 25, 2018</a></div>
-                      <div><a href="##"><span class="icon-person"></span> Admin</a></div>
-                      <div><a href="##"><span class="icon-chat"></span> 19</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="ftco-footer-widget mb-5 ml-md-4">
+              <div class="ftco-footer-widget mb-5 ml-md-3">
                 <h2 class="ftco-heading-2">#linksSectionTitle#</h2>
                 <ul class="list-unstyled">
                   <cfloop list="#links#" index="link">
+                      <li class="py-2">
+                          #renderLink(id="#link#",before="<span class='ion-ios-arrow-round-forward mr-2'></span>")#
+                      </li>
+                  </cfloop>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-5 ml-md-3">
+                <h2 class="ftco-heading-2">#linksSectionTitle2#</h2>
+                <ul class="list-unstyled">
+                  <cfloop list="#links2#" index="link">
                       <li class="py-2">
                           #renderLink(id="#link#",before="<span class='ion-ios-arrow-round-forward mr-2'></span>")#
                       </li>

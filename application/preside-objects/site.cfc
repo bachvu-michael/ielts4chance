@@ -2,6 +2,9 @@ component {
     property name="links_section_title"       type="string"   dbtype="varchar" default="links";
     property name="links"                     type="string"   dbtype="text" control="linkPicker"multiple="true" sortable="true" quickadd="true" quickedit="true";
    
+    property name="links_section_title_2"       type="string"   dbtype="varchar" default="links";
+    property name="links_2"                     type="string"   dbtype="text" control="linkPicker"multiple="true" sortable="true" quickadd="true" quickedit="true";
+
     property name="social_link_section_title"   type="string"   dbtype="varchar" default="Follow us";
     property name="social_links"                type="string"   dbtype="text";
 

@@ -63,6 +63,22 @@
 	      }
 	    }
 		});
+		$('.owl-carouse-2').owlCarousel({
+			loop:true,
+			margin:10,
+			nav:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:3
+				},
+				1000:{
+					items:5
+				}
+			}
+		})
 		$('.carousel-testimony').owlCarousel({
 			autoplay: true,
 			center: true,
@@ -84,6 +100,8 @@
 				}
 			}
 		});
+		
+		
 
 	};
 	carousel();

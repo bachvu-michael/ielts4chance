@@ -14,6 +14,9 @@
 			<field binding="site.links_section_title" />
 			<field binding="site.links" />
 
+			<field binding="site.links_section_title_2" />
+			<field binding="site.links_2" />
+
 			<field binding="site.info_section_title" />
 			<field binding="site.messager_config" />
 		</fieldset>

@@ -46,9 +46,10 @@
         
         <link rel="stylesheet" href="/assets/kiddos/css/flaticon.min.css">
         <link rel="stylesheet" href="/assets/kiddos/css/icomoon.min.css">
+        <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="/assets/kiddos/css/style.min.css">
         <link rel="stylesheet" href="/assets/css/core/custom.css">
-
+        
         <link rel="shortcut icon" href="/assets/img/logo50x50.png" type="image/x-icon">
 
         #event.renderIncludes( "css" )#
@@ -84,7 +85,7 @@
         <script src="/assets/kiddos/js/jquery.animateNumber.min.js" ></script>
         <script src="/assets/kiddos/js/scrollax.min.js"></script>
         <script src="/assets/kiddos/js/scrollax.min.js"></script>
-        <script src="/assets/kiddos/js/main.min.js"></script>
+        <script src="/assets/kiddos/js/main.js"></script>
         #event.renderIncludes("js")#
       
     </body>

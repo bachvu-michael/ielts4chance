@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="widgets.widget_offline_cource_info:">
+	<tab>
+		<fieldset>
+			<field name="paragrap_1" control="richEditor"/>
+			<field name="paragrap_2" control="richEditor"/>
+		</fieldset>
+	</tab>
+</form>
