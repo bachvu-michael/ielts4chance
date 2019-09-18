@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form i18nBaseUri="widgets.widget_offline_cource_info:">
+<form i18nBaseUri="widgets.widget_offline_course_info:">
 	<tab>
 		<fieldset>
 			<field name="paragrap_1" control="richEditor"/>

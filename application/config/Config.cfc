@@ -65,6 +65,12 @@ component extends="preside.system.config.Config" {
 					{ method="Resize", args={ height=240, maintainaspectratio=true } }
 				]
 		};
+		derivatives.1350x485 = {
+			permissions = "inherit"
+			, transformations = [
+					{ method="Resize", args={ width=1350, height=485, maintainaspectratio=true } }
+				]
+		};
 		
 
 		return derivatives;

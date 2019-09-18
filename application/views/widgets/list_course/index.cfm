@@ -10,9 +10,9 @@
 <cfoutput>
 	<section class="ftco-section">
         <div class="container">
-            <div class="row justify-content-center mb-5 pb-2">
+            <div class="row justify-content-center pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-4"><span>#args.title_1#</span> #args.title_2#</h2>
+                    <h2><span>#args.title_1#</span> #args.title_2#</h2>
                     <p>#args.subtitle#</p>
                 </div>
             </div>

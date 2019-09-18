@@ -10,7 +10,7 @@
     .include(assetId="js-request-quote");
     img = "/assets/kiddos/images/bg_5.jpg";
     if(!isEmpty(args.image)){
-        img = event.buildLink(assetId=args.image);
+        img = event.buildLink(assetId=args.image,derivative="1350x485");
     }
 </cfscript>
 <cfoutput>
