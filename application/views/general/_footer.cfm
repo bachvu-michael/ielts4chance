@@ -74,7 +74,7 @@
           </div>
           <div class="row">
             <div class="col-md-12 text-center">
-              <p>Website made by <a href="http://maydental.vn">Maydental</a></p>
+              <p>Website made by <a href="https://bachsoftware.shop/">Bachvu</a></p>
             </div>
           </div>
         </div>
